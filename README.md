@@ -13,4 +13,4 @@ building a website with webpack, react and sass.
 ## Initial setup
 
 Run `npm install` to install dependencies. You'll also 
-need __typescript__ and __webpack__ (`npm install -g typescript webpack').
+need __typescript__ and __webpack__ (`npm install -g typescript webpack`).
