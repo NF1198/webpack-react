@@ -1,7 +1,7 @@
 {
-  "name": "webcharm-purple",
+  "name": "webpack-react",
   "version": "0.0.1",
-  "description": "web template: webpack, gulp",
+  "description": "web template: webpack, react, sass",
   "main": "index.js",
   "scripts": {
     "copy:lib": "mkdir -p src/lib && cp node_modules/es6-promise/dist/es6-promise.js src/lib/es6-promise.js && cp node_modules/react/dist/react.js src/lib/react.js && cp node_modules/react-dom/dist/react-dom.js src/lib/react-dom.js",
@@ -17,11 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "tbd"
+    "url": "https://github.com/NF1198/webpack-react"
   },
   "keywords": [
     "template",
-    "seed"
+    "seed", 
+    "webpack", 
+    "react"
   ],
   "author": "Nicholas Folse",
   "license": "ISC",
