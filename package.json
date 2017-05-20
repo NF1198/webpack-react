@@ -10,9 +10,9 @@
     "dist:lib": "mkdir -p dist && cp -r src/lib dist",
     "clean:lib": "rm -rf src/lib",
     "clean:dist": "rm -rf dist && mkdir dist",
-    "server": "webpack-dev-server --content-base src/",
+    "start": "webpack-dev-server --content-base src/",
     "server:production": "http-server dist",
-    "build:webpack": "webpack",
+    "build:webpack": "NODE_ENV=production webpack",
     "build:dist": "npm run build:webpack && npm run copy:lib && npm run dist:lib && npm run dist:html && npm run dist:images"
   },
   "repository": {
@@ -26,21 +26,26 @@
   "author": "Nicholas Folse",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
     "awesome-typescript-loader": "^3.1.3",
+    "css-loader": "^0.28.1",
+    "es6-promise": "^4.1.0",
     "eslint": "^3.19.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "mocha": "^3.4.1",
+    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.5",
     "source-map-loader": "^0.2.1",
+    "style-loader": "^0.17.0",
     "ts-loader": "^2.0.3",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5",
-    "webpack-stream": "^3.2.0",
-    "@types/react": "^15.0.24",
-    "@types/react-dom": "^15.5.0",
-    "es6-promise": "^4.1.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "webpack-stream": "^3.2.0"
   },
   "dependencies": {}
 }
