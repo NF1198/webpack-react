@@ -1,0 +1,46 @@
+{
+  "name": "webcharm-purple",
+  "version": "0.0.1",
+  "description": "web template: webpack, gulp",
+  "main": "index.js",
+  "scripts": {
+    "copy:lib": "mkdir -p src/lib && cp node_modules/es6-promise/dist/es6-promise.js src/lib/es6-promise.js && cp node_modules/react/dist/react.js src/lib/react.js && cp node_modules/react-dom/dist/react-dom.js src/lib/react-dom.js",
+    "dist:html": "mkdir -p dist && cp src/*.html dist/",
+    "dist:images": "mkdir -p dist && cp -r src/images dist",
+    "dist:lib": "mkdir -p dist && cp -r src/lib dist",
+    "clean:lib": "rm -rf src/lib",
+    "clean:dist": "rm -rf dist && mkdir dist",
+    "server": "webpack-dev-server --content-base src/",
+    "server:production": "http-server dist",
+    "build:webpack": "webpack",
+    "build:dist": "npm run build:webpack && npm run copy:lib && npm run dist:lib && npm run dist:html && npm run dist:images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "template",
+    "seed"
+  ],
+  "author": "Nicholas Folse",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.3",
+    "eslint": "^3.19.0",
+    "mocha": "^3.4.1",
+    "nodemon": "^1.11.0",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-stream": "^3.2.0",
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "es6-promise": "^4.1.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "dependencies": {}
+}
