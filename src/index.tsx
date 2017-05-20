@@ -5,7 +5,7 @@ ES6PromiseShim.polyfill();
 
 import './sass/main.scss';
 
-import { Hello } from "./components/TicTacToe";
+import { Hello } from "./components/Hello";
 
 ReactDOM.render(
     <Hello compiler="TypeScript" framework="React" />,
